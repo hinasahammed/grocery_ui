@@ -102,6 +102,7 @@ class HomeView extends StatelessWidget {
                                   AnimationAsset.addedToCart,
                                   width: 30,
                                   height: 30,
+                                  repeat: false,
                                 )
                               : Icon(
                                   Icons.add_shopping_cart,
