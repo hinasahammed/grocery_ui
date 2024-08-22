@@ -17,17 +17,17 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => HomeViewmodel(),
       child: MaterialApp(
-      title: 'Grocery ui',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xffe76f51),
+        title: 'Grocery ui',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color(0xffe76f51),
+          ),
+          useMaterial3: true,
+          textTheme: GoogleFonts.robotoMonoTextTheme(),
         ),
-        useMaterial3: true,
-        textTheme: GoogleFonts.robotoMonoTextTheme(),
+        home: const HomeView(),
       ),
-      home: const HomeView(),
-    ),
     );
   }
 }
