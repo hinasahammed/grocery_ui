@@ -76,11 +76,15 @@ class HomeView extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              data.groceryName,
-                              style: theme.textTheme.bodyLarge!.copyWith(
-                                color: theme.colorScheme.onSurface,
-                                fontWeight: FontWeight.bold,
+                            SizedBox(
+                              width: 60,
+                              child: Text(
+                                data.groceryName,
+                                style: theme.textTheme.bodyLarge!.copyWith(
+                                  color: theme.colorScheme.onSurface,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ),
                             Text(
@@ -94,7 +98,7 @@ class HomeView extends StatelessWidget {
                         IconButton(
                           onPressed: () {
                             if (!groceryItem.cartGrocery.contains(data)) {
-                              homeProvider.addToCart(data);
+                              homeProvider.addToCart(data,context);
                             }
                           },
                           icon: groceryItem.cartGrocery.contains(data)
