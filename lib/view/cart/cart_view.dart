@@ -67,7 +67,7 @@ class CartView extends StatelessWidget {
                             const Spacer(),
                             IconButton(
                               onPressed: () {
-                                homeProvider.removeFromCart(data,context);
+                                homeProvider.removeFromCart(data, context);
                               },
                               icon: Icon(
                                 Icons.delete,
@@ -96,18 +96,45 @@ class CartView extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        "Total",
-                        style: theme.textTheme.bodyLarge!.copyWith(
-                          color: theme.colorScheme.onPrimaryContainer,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Total",
+                            style: theme.textTheme.titleLarge!.copyWith(
+                              color: theme.colorScheme.onPrimaryContainer,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "₹${cart.total}",
+                            style: theme.textTheme.labelLarge!.copyWith(
+                              color: theme.colorScheme.onPrimaryContainer,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
-                      Text(
-                        "₹${cart.total}",
-                        style: theme.textTheme.labelLarge!.copyWith(
-                          color: theme.colorScheme.onPrimaryContainer,
-                          fontWeight: FontWeight.bold,
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: theme.colorScheme.primary,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.logout,
+                              color: theme.colorScheme.onPrimary,
+                            ),
+                            const Gap(10),
+                            Text(
+                              "Checkout",
+                              style: theme.textTheme.bodyLarge!.copyWith(
+                                color: theme.colorScheme.onPrimary,
+                              ),
+                            )
+                          ],
                         ),
                       )
                     ],
