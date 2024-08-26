@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (context) => HomeViewmodel(),
         ),
-        ChangeNotifierProvider(
+        ChangeNotifierProvider( 
           create: (context) => CartViewmodel(),
         ),
       ],
