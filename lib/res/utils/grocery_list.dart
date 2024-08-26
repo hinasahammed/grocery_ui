@@ -10,7 +10,7 @@ List<GroceryModel> groceryList = [
   GroceryModel(
     groceryName: "Banana",
     imageUrl: ImageAssets.banana,
-    price: "45",
+    price: "55",
   ),
   GroceryModel(
     groceryName: "Bread",
