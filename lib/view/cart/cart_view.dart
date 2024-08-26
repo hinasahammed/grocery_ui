@@ -85,7 +85,6 @@ class CartView extends StatelessWidget {
                 builder: (context, cart, child) => Container(
                   padding: const EdgeInsets.all(16),
                   width: double.infinity,
-                  height: 80,
                   decoration: BoxDecoration(
                     color: theme.colorScheme.primaryContainer,
                     borderRadius: const BorderRadius.only(
