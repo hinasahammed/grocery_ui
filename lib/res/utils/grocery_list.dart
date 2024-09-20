@@ -1,10 +1,11 @@
 import 'package:grocery_ui/assets/images/image_assets.dart';
+import 'package:grocery_ui/gen/assets.gen.dart';
 import 'package:grocery_ui/model/grocery_model.dart';
 
 List<GroceryModel> groceryList = [
   GroceryModel(
     groceryName: "Apple",
-    imageUrl: ImageAssets.apple,
+    imageUrl: Assets.images.apple.path,
     price: "80",
   ),
   GroceryModel(
