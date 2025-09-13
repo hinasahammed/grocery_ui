@@ -1,6 +1,6 @@
 # grocery_ui
 
-A new Flutter project.
+It is a grocery ui with provider
 
 ## Getting Started
 
